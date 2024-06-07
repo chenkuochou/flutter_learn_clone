@@ -1,12 +1,11 @@
-import 'package:flutter_learn_clone/data/segment.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 
 final segmentNotifierProvider =
-    NotifierProvider<SegmentNotifier, Segment>(SegmentNotifier.new);
+    NotifierProvider<SegmentNotifier, int>(SegmentNotifier.new);
 
-class SegmentNotifier extends Notifier<Segment> {
+class SegmentNotifier extends Notifier<int> {
   @override
-  build() => Segment.beginner;
+  build() => 0;
 
-  void updateSegment(Segment segment) => state = segment;
+  void updateSegment(int index) => state = index;
 }
